@@ -21,7 +21,7 @@ _SIZE_PREFIX=214000
 _RAND_SUFFIX=$(printf "%04d" $((RANDOM % 10000)))
 VOL_SIZE="-v${_SIZE_PREFIX}${_RAND_SUFFIX}b"
 
-"C:\Program Files\7-Zip\7z.exe" a -t7z -m0=lzma2 -mx=7 -mfb=64 -md=128m -ms=on -mf=BCJ2 "$VOL_SIZE" ComfyUI_Windows_portable_cu128.7z ComfyUI_Windows_portable
+"C:\Program Files\7-Zip\7z.exe" a -t7z -m0=lzma2 -mx=5 -mfb=32 -md=16m -ms=on -mf=BCJ2 "$VOL_SIZE" ComfyUI_Windows_portable_cu128.7z ComfyUI_Windows_portable
 
 cd m_folder
 "C:\Program Files\7-Zip\7z.exe" a -tzip "$VOL_SIZE" models.zip ComfyUI_Windows_portable
